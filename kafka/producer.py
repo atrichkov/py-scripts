@@ -33,6 +33,6 @@ class MessageProducer:
 
 message_producer = MessageProducer(broker, topic)
 
-data = {'a': 'GAB7WM22CNLUYZA25XS4TAXHRSVEIQ4GO6DX2NJGNVC2XZKW366W6635', 'ht': 44314785}
+data = {'key1': 'value 1', 'key2': 'value 2', 'key3': 'value 3'}
 resp = message_producer.send_msg(data)
 print(resp)
