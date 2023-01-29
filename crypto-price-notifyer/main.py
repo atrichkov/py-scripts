@@ -2,6 +2,7 @@ import time
 import os
 import requests
 
+refreshTime = 3
 
 def message(title, content):
     os.system('notify-send "' + title + '" "' + content + '"')
@@ -20,5 +21,5 @@ def check_price():
     return current_price
 
 while True:
-    time.sleep(3)
+    time.sleep(refreshTime)
     price = check_price()
