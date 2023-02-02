@@ -1,3 +1,7 @@
+# Disposable Email Checker
+
+Initialize check endpoint to validate disposable emails
+
 ## Install
 
 - Requires an [installation of Python3](https://www.python.org/downloads/)
