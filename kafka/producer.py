@@ -1,10 +1,9 @@
-import sys
+import os
 import json
 from kafka import KafkaProducer
 
-broker = ''
-topic = sys.argv[1]
-
+broker = os.environ['KAFKA_HOST']
+topic = os.environ['KAFKA_TOPIC']
 
 class MessageProducer:
     broker = ""
@@ -15,10 +14,10 @@ class MessageProducer:
         self.broker = broker
         self.topic = topic
         self.producer = KafkaProducer(bootstrap_servers=self.broker,
-                                      value_serializer=lambda v: json.dumps(v).encode('utf-8'),
-                                      acks='all',
-                                      retries=3
-                                    )
+            value_serializer=lambda v: json.dumps(v).encode('utf-8'),
+            acks='all',
+            retries=3
+        )
 
     def send_msg(self, msg):
         print("sending message...")
