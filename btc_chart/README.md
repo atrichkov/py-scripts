@@ -1,7 +1,7 @@
 # Create bitcoin chart image
 
 ## Install
-
+From https://get.docker.com:
 ```shell
 docker build -t btc_chart .
 ```
