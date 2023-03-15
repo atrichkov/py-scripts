@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  producer:
+    build: .
+    environment:
+      kafka_host: "0.0.0.0:9092"
+      kafka_topic: sync-db-optimizer-stellar-mainnet

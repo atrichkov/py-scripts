@@ -2,8 +2,8 @@ import os
 import json
 from kafka import KafkaProducer
 
-broker = os.environ['KAFKA_HOST']
-topic = os.environ['KAFKA_TOPIC']
+broker = os.environ['kafka_host']
+topic = os.environ['kafka_topic']
 
 class MessageProducer:
     broker = ""
